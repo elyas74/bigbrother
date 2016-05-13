@@ -1,0 +1,9 @@
+{
+   "apps": [{
+      "name": "bigbro_v0.0.0",
+      "script": "./app.js",
+      "err_file": "bigbro_v0.0.0_err.log",
+      "out_file": "bigbro_v0.0.0_out.log",
+      "args": "['-x']"
+   }]
+}
