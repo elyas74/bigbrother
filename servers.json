@@ -1,0 +1,5 @@
+{
+    "localhost:2526": {
+        "proxy_url": "http://timing.kiaan.org"
+    }
+}

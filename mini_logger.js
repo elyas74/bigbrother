@@ -7,7 +7,7 @@
 var fs = require('fs');
 var path = require('path');
 
-function log(log_string) {
+function log(log_string, host) {
     var d = new Date();
 
     var date = d.getFullYear() + '/' + d.getMonth() + '/' + d.getDate();
@@ -19,13 +19,18 @@ function log(log_string) {
     var log_date = "[" + date + " " + time + "]";
 
     console.log(log_date + " -> " + log_string);
-    file_log(log_date + " -> " + log_string + '\n');
+    file_log(log_date + " -> " + log_string + '\n', host);
 }
 
 module.exports = log;
 
-function file_log(log) {
+function file_log(log, host) {
     fs.appendFile(path.join(__dirname, "./server.log"), log, function(err) {
         if (err) return console.error(err);
     });
+
+    if (host)
+        fs.appendFile(path.join(__dirname, "./server-" + host + ".log"), log, function(err) {
+            if (err) return console.error(err);
+        });
 }
