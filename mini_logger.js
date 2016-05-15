@@ -30,7 +30,7 @@ module.exports = log;
 
 function file_log(log, file_name) {
 
-    fs.appendFile(path.join(__dirname, "./server-" + file_name + ".log"), log, function(err) {
+    fs.appendFile(path.join(__dirname, "./logs/server-" + file_name + ".log"), log, function(err) {
         if (err)
             console.error(err);
     });
