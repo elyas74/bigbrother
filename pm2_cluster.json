@@ -4,6 +4,8 @@
       "script": "./app.js",
       "err_file": "bigBro_v0.0.0_err.log",
       "out_file": "bigBro_v0.0.0_out.log",
+      "instances": 2,
+      "exec_mode": "cluster",
       "args": "['-x']"
    }]
 }
