@@ -11,9 +11,9 @@ function log(log_string, host) {
 
     var d = new Date();
 
-    var date = d.getFullYear() + '/' + d.getMonth() + '/' + d.getDate();
+    var date = d.getFullYear() + '/' + (d.getMonth()+1) + '/' + d.getDate();
 
-    var file_name = d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate();
+    var file_name = d.getFullYear() + '-' + (d.getMonth()+1) + '-' + d.getDate();
 
     var second = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds();
     var minuate = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
